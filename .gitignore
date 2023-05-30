@@ -1,6 +1,9 @@
 .DS_Store
 .vscode
 
+data.json
+data.csv
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
