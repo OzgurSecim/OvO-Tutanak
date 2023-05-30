@@ -12,6 +12,8 @@
 
 ### Election - 14 May 2023
 
+[data_may14.csv (version 2)](https://drive.google.com/file/d/1J-xZT5Gy5wsT7G2yLUjDPZk0k1ESRWYW/view?usp=sharing)
+
 ## Environment Setup
 
 You can install requirements with the following command:
@@ -32,4 +34,6 @@ It is possible to obtain data of a specific city by changing `city` argument in 
 
 ## Statistical Analysis
 
-You can convert the data to **.csv** format and infer statistics. 
+You can convert the data to **.csv** format and infer statistics with the following command:
+
+    python stats.py
