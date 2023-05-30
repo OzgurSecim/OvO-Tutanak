@@ -54,7 +54,7 @@ class DataScraper:
             meta = self.meta[target]
             
             if self.key2city[target] in data:
-                temp = data[self.key2city(target)]
+                temp = data[self.key2city[target]]
             else:
                 temp = {}
 
