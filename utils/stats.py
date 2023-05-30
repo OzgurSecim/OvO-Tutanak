@@ -1,5 +1,6 @@
 import json
 import pandas as pd
+import numpy as np
 
 
 class StatsCalculator:
@@ -24,3 +25,30 @@ class StatsCalculator:
 
             self.data = pd.DataFrame(to_df, columns=['ilAdi', 'ilceAdi', 'mahalleAdi', 'okulAdi', 'sandikNo', 'tutanak', 'url', 'RECEP TAYYİP ERDOĞAN', 'KEMAL KILIÇDAROĞLU'])
             self.data.to_csv('data.csv', index=False)
+
+    def __call__(self, simple=True):
+        if simple:
+            '''
+            '''
+            stats = []
+            cities = list(self.data['ilAdi'].unique())
+            for city in cities:
+                temp = self.data.loc[self.data['ilAdi'] == city]
+                
+                total_count, total_record = len(temp), np.sum(temp['tutanak'])
+                
+                district_count = pd.DataFrame(temp.groupby('ilceAdi')['tutanak'].count()).to_dict()
+                district_record = pd.DataFrame(temp.groupby('ilceAdi')['tutanak'].sum()).to_dict()
+
+                for key, value in district_count['tutanak'].items():
+                    stats.append([city, total_record, total_count, total_record / total_count, key, district_record['tutanak'][key], value, district_record['tutanak'][key] / value])
+
+
+
+            df = pd.DataFrame(stats, columns=['ilAdi', 'toplamSandik', 'toplamTutanak', 'tutanakOrani', 'ilceAdi', 'ilceToplamSandik', 'ilceToplamTutanak', 'ilceTutanakOrani'])
+            df.to_csv('stats_simple.csv', index=False)
+
+        else:
+            '''
+            '''
+            pass

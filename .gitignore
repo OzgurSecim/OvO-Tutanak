@@ -3,6 +3,7 @@
 
 data.json
 data.csv
+stats_simple.csv
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

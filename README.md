@@ -8,6 +8,8 @@
 
 [data.csv (version 0)](https://drive.google.com/file/d/1Ze3uaQybedMyMbhWETedbmKCtGtIbqQD/view?usp=sharing)
 
+[stats_simple.csv (version 0)](https://drive.google.com/file/d/1Ox5jBq6T2YXyYe5QQJHUylGUAccUcWue/view?usp=sharing)
+
 ### Election - 14 May 2023
 
 ## Environment Setup
